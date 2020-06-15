@@ -1,0 +1,23 @@
+{
+  "name": "zelta",
+  "version": "0.5.0",
+  "description": "Secure terminal messaging",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": true,
+  "bin": "./main.js",
+  "author": "Arjun Nair",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "conf": "^6.2.4",
+    "crypto-js": "^4.0.0",
+    "enquirer": "^2.3.5",
+    "moment": "^2.26.0",
+    "njwt": "^1.0.0"
+  }
+}
