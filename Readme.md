@@ -13,7 +13,7 @@ $ zelta help
 $ zelta register
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/register.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/register.gif">
 </p>
 
 *Login. Once you login, the access token is valid for 24 hrs. You should logout after each session on an untrusted device.*
@@ -21,7 +21,7 @@ $ zelta register
 $ zelta login
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/login.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/login.gif">
 </p>
 
 *Send a message*
@@ -29,7 +29,7 @@ $ zelta login
 $ zelta send
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/send-msg.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/send-msg.gif">
 </p>
 
 *Create a group. There are two types of groups in zelta : public and private. Anyone can join a public group using the passphrase but private groups require an invite to join. The invitation is sent by the admin, who is the creator of the group. Currently in beta the group limit is 50 members.*
@@ -37,7 +37,7 @@ $ zelta send
 $ zelta group
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/group-creation.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/group-creation.gif">
 </p>
 
 *Join a public group using the passphrase. Group names are referred to using the @ symbol.*
@@ -45,12 +45,12 @@ $ zelta group
 $ zelta join <group>
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/join-grp.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/join-grp.gif">
 </p>
 
 *If you try joining a private group, zelta mentions that you need an invite.*
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/no-invite-join.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/no-invite-join.gif">
 </p>
 
 *Invite a user to your group (admin privilege). Use @ for mentioning group name.*
@@ -58,7 +58,7 @@ $ zelta join <group>
 $ zelta invite <user> <group>
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/send-invite.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/send-invite.gif">
 </p>
 
 *Accept a group invite. You will receive the invite in your inbox.*
@@ -66,12 +66,12 @@ $ zelta invite <user> <group>
 $ zelta accept-invite <group>
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/accept-invite.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/accept-invite.gif">
 </p>
 
 *To send messages to a group, just address the message to a group name using @. Needless to say, you need to be a member or admin of the group. Remember that @ tells zelta that you intend to send the message to a group. Without @ the message may be sent to a user with the same username as the group name.*
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/group-msg.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/group-msg.gif">
 </p>
 
 *You can always change the access level of your groups (admin privilege)*
@@ -82,7 +82,7 @@ $ zelta set-public <group>
 $ zelta set-private <group>
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/public-private.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/public-private.gif">
 </p>
 
 *Check your messages using the inbox command. Group messages appear in a user@group format. The time shown is GMT unless you have configured your local timezone.*
@@ -90,7 +90,7 @@ $ zelta set-private <group>
 $ zelta inbox
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/inbox.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/inbox.gif">
 </p>
 
 *Configure your local timezone using the timezone configuration wizard. For your security and anonymity, this info is not sent to the server. You will have to re-configure your timezone each time you are on a new device or each time you perform a fresh install. If you dont do this all incoming messages will show the GMT time.*
@@ -98,7 +98,7 @@ $ zelta inbox
 $ zelta timezone
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/timezone.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/timezone.gif">
 </p>
 
 *List all the members of a group. Needless to say, you need to be a member yourself.*
@@ -106,7 +106,7 @@ $ zelta timezone
 $ zelta members <group>
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/members.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/members.gif">
 </p>
 
 *Leave a group. If you are the admin, the oldest member of the group becomes the new admin.*
@@ -114,7 +114,7 @@ $ zelta members <group>
 $ zelta leave <group>
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/leave.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/leave.gif">
 </p>
 
 *Kick a group member (admin privilege)*
@@ -122,7 +122,7 @@ $ zelta leave <group>
 $ zelta kick <user> <group>
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/kick.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/kick.gif">
 </p>
 
 *Logout. You should logout after each session on an untrusted device. If you dont logout, the access token expires in 24 hrs.*
@@ -130,5 +130,5 @@ $ zelta kick <user> <group>
 $ zelta logout
 ```
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/zeltagq/docs/master/gifs/logout.gif">
+  <img src = "https://raw.githubusercontent.com/zeltagq/zelta-client/master/gifs/logout.gif">
 </p>
