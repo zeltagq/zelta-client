@@ -15,6 +15,9 @@ function acceptInvite(group) {
         if(res.status === 209) {
             return console.log(chalk.yellowBright('You dont have an invitation for the group'));
         }
+        if(res.status === 211) {
+            return console.log(chalk.whiteBright('Group is currently full'));
+        }
         console.log(chalk.whiteBright('You joined ' + chalk.yellowBright(group)));
     }, (err) => {
         console.log(chalk.yellowBright('Failed to join group! This may be a server error or you need to login again.'));

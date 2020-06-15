@@ -49,6 +49,9 @@ function joinGrp(group) {
                 if(response.status === 209) {
                     return console.log(chalk.whiteBright('You need an invite to join this group'));
                 }
+                if(response.status === 211) {
+                    return console.log(chalk.whiteBright('Group is currently full'));
+                }
                 console.log(chalk.whiteBright('You joined ' + chalk.yellowBright(group)));
             }, (err) => {
                 console.log(chalk.whiteBright('Failed to join group! This may be a server error or you need to login again.'));

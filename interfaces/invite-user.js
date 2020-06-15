@@ -18,6 +18,9 @@ function inviteUser(invite,group) {
         if(res.status === 209) {
             return console.log(chalk.yellowBright('Invited user is already a member of the group'));
         }
+        if(res.status === 211) {
+            return console.log(chalk.yellowBright('Group has reached its member limit. Currently the limit is 50 members.'));
+        }
         console.log(chalk.whiteBright('Invitation sent to ' + chalk.yellowBright(invite)));
     }, (err) => {
         console.log(chalk.yellowBright('Failed to invite user! This may be a server error or you need to login again.'));
