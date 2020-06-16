@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/zeltagq",
+  "homepage": "https://www.zelta.gq/",
   "preferGlobal": true,
   "bin": "./main.js",
   "author": "Arjun Nair",
