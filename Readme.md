@@ -3,7 +3,7 @@
 </p>
 
 ### What is Zelta?
-*Zelta is a secure and anonymous messaging service. The zelta project thrives to provide an environment for highly confidential conversations as well as your daily small talk. It only has a cli client to protect you against various web and mobile vulnerabilities. It is cross platform compatible with the only runtime dependency being Node JS.*
+*Zelta is a secure and anonymous messaging service. The zelta project aims to provide a secure environment for highly confidential conversations as well as mundane small talk. It only has a cli client to protect you against various web and mobile vulnerabilities. It is cross platform compatible with the only runtime dependency being Node JS.*
 
 ##### Zelta provides several powerful features, all accessible through lucid cli commands. Here's a list of all the available commands.
 
