@@ -20,8 +20,11 @@ const {leave} = require('./interfaces/leave-group');
 const {members} = require('./interfaces/list-members');
 const {timezone} = require('./interfaces/timezone');
 
-// Available key ids for signing jwt tokens
-global.key_ids = ['key1', 'key2', 'key3', 'key4', 'key5', 'key6', 'key7', 'key8'];
+// Available key ids (100 key ids)
+global.key_ids = [];
+for(let i=1; i<101; i++) {
+    key_ids.push(`key${i}`);
+}
 
 // Application server url
 config.set('server-url', 'https://v1.zelta.gq');
