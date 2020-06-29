@@ -1,6 +1,6 @@
 {
   "name": "zelta",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Secure terminal messaging",
   "main": "main.js",
   "scripts": {
