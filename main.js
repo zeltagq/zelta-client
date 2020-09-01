@@ -31,9 +31,9 @@ const {chatRegion} = require('./interfaces/chat-region');
 updateNotifier({pkg}).notify();
 
 // Application server url
-config.set('server-url', 'https://zelta-server.herokuapp.com');
+config.set('server-url', 'https://v1.zelta.gq');
 // Live chat server
-config.set('chat-url', 'https://zelta-chat.herokuapp.com');
+config.set('chat-url', 'https://eu.chat.zelta.gq');
 
 if(config.get('username') === undefined && config.get('token') === undefined) {
     config.set('username', null);
