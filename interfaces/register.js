@@ -2,6 +2,7 @@ const {prompt} = require('enquirer');
 const chalk = require('chalk');
 const axios = require('axios');
 const njwt = require('njwt');
+const uniqid = require('uniqid');
 
 function register() {
     let questions1 = [
@@ -48,7 +49,7 @@ function register() {
                 prompt(questions2).then(answers2 => {
                     if(answers2.password === answers2.confirm_password) {
                         let password = answers2.password;
-                        let key = key_ids[Math.floor(Math.random() * key_ids.length)];
+                        let key = uniqid();
                         axios.get(`${config.get('server-url')}/mk/${key}`).then((res) => {
                             let key_string = res.data;
                             let sk = Buffer.from(key_string, 'base64');

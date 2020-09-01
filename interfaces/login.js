@@ -2,6 +2,7 @@ const { prompt } = require('enquirer');
 const chalk = require('chalk');
 const axios = require('axios');
 const njwt = require('njwt');
+const uniqid = require('uniqid');
 
 function login() {
     let questions = [
@@ -28,7 +29,7 @@ function login() {
     prompt(questions).then(answers => {
         let username = answers.username;
         let password = answers.password;
-        let key = key_ids[Math.floor(Math.random() * key_ids.length)];
+        let key = uniqid();
         axios.get(`${config.get('server-url')}/mk/${key}`).then((res) => {
             let key_string = res.data;
             let sk = Buffer.from(key_string, 'base64');

@@ -3,6 +3,7 @@ const axios = require('axios');
 axios.defaults.headers.post['X-Auth-Token'] = config.get('token');
 const CryptoJS = require('crypto-js');
 const chalk = require('chalk');
+const uniqid = require('uniqid');
 
 function send() {
     let questions = [
@@ -32,11 +33,11 @@ function send() {
         if(answers.to === config.get('username')) {
             return console.log(chalk.yellowBright('You are so lonely that you need to send messages to yourself!'));
         }
-        let key = key_ids[Math.floor(Math.random() * key_ids.length)];
+        let key = uniqid();
         axios.get(`${config.get('server-url')}/mk/${key}`).then((res) => {
             let sk = res.data;
             let msg = answers.msg;
-            var cipher = CryptoJS.AES.encrypt(msg, sk).toString();
+            let cipher = CryptoJS.AES.encrypt(msg, sk).toString();
             console.log(chalk.bold.grey('Encrypting message.....(AES)'));
             let claims = {
                 to : answers.to,

@@ -1,7 +1,7 @@
 {
   "name": "zelta",
-  "version": "0.5.2",
-  "description": "Secure terminal messaging",
+  "version": "1.0.0",
+  "description": "Secure terminal messaging (Test build)",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,17 +9,28 @@
   "repository": "https://github.com/zeltagq",
   "homepage": "https://www.zelta.gq/",
   "preferGlobal": true,
-  "bin": "./main.js",
+  "bin": {
+    "zelta": "./main.js"
+  },
   "author": "Arjun Nair",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2",
+    "boxen": "^4.2.0",
     "chalk": "^4.0.0",
+    "cli-cursor": "^3.1.0",
     "commander": "^5.1.0",
     "conf": "^6.2.4",
     "crypto-js": "^4.0.0",
     "enquirer": "^2.3.5",
+    "gradient-string": "^1.2.0",
+    "inspirational-quotes": "^1.0.8",
     "moment": "^2.26.0",
-    "njwt": "^1.0.0"
+    "njwt": "^1.0.0",
+    "node-emoji": "^1.10.0",
+    "socket.io-client": "^2.3.0",
+    "terminal-kit": "^1.42.0",
+    "uniqid": "^5.2.0",
+    "update-notifier": "^4.1.1"
   }
 }

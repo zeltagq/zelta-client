@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const axios = require('axios');
 axios.defaults.headers.post['X-Auth-Token'] = config.get('token');
 const njwt = require('njwt');
+const uniqid = require('uniqid');
 
 function createGroup() {
     let questions1 = [
@@ -65,7 +66,7 @@ function createGroup() {
                 }
                 let passkey = answers2.passkey;
                 let invite_only = answers2.invite_only;
-                let key = key_ids[Math.floor(Math.random() * key_ids.length)];
+                let key = uniqid();
                 axios.get(`${config.get('server-url')}/mk/${key}`).then((res) => {
                     let key_string = res.data;
                     let sk = Buffer.from(key_string, 'base64');

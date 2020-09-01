@@ -3,6 +3,9 @@
 const Conf = require('conf');
 global.config = new Conf({ projectName: 'zelta' });
 const {program} = require('commander');
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
+program.version(`${pkg.version} (Code Blue) [Stable Release 2020]`);
 
 const {register} = require('./interfaces/register');
 const {login} = require('./interfaces/login');
@@ -19,20 +22,24 @@ const {setPublic} = require('./interfaces/set-public');
 const {leave} = require('./interfaces/leave-group');
 const {members} = require('./interfaces/list-members');
 const {timezone} = require('./interfaces/timezone');
+const {createRoom} = require('./interfaces/create-chat');
+const {joinRoom} = require('./interfaces/join-chat');
+const {typingEffect} = require('./interfaces/chat-animations');
+const {chatRegion} = require('./interfaces/chat-region');
 
-// Available key ids (100 key ids)
-global.key_ids = [];
-for(let i=1; i<101; i++) {
-    key_ids.push(`key${i}`);
-}
+// Notify user about new updates
+updateNotifier({pkg}).notify();
 
 // Application server url
-config.set('server-url', 'https://v1.zelta.gq');
+config.set('server-url', 'https://zelta-server.herokuapp.com');
+// Live chat server
+config.set('chat-url', 'https://zelta-chat.herokuapp.com');
 
 if(config.get('username') === undefined && config.get('token') === undefined) {
     config.set('username', null);
     config.set('token', null);
 }
+config.set('chat-animation', false);
 
 // -------- Commands --------
 
@@ -154,6 +161,38 @@ program
     .description('Configure local timezone')
     .action(() => {
         timezone();
+    });
+
+// Create chat room
+program
+    .command('chatroom')
+    .description('Create a chat room')
+    .action(() => {
+        createRoom();
+    });
+
+// Join chat room
+program
+    .command('chat')
+    .description('Join a chat room')
+    .action(() => {
+        joinRoom();
+    });
+
+// Enable or disable typing effect
+program
+    .command('typing-effect <value>')
+    .description('Enable or disable chat typing effect')
+    .action((value) => {
+        typingEffect(value);
+    });
+
+// Change chat server region
+program
+    .command('region <value>')
+    .description('Set chat server region')
+    .action((region) => {
+        chatRegion(region);
     });
 
 program.parse(process.argv);
