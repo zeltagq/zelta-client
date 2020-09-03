@@ -63,7 +63,7 @@ function joinRoom() {
         // socket.io events
         socket = io(config.get('chat-url'), {
             reconnection: true,
-            reconnectionAttempts: 10
+            reconnectionAttempts: 10,
         });
 
         // Initiating connection by providing credentials

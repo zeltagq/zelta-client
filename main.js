@@ -32,13 +32,18 @@ updateNotifier({pkg}).notify();
 
 // Application server url
 config.set('server-url', 'https://v1.zelta.gq');
-// Live chat server
-config.set('chat-url', 'https://eu.chat.zelta.gq');
 
+// Username and token
 if(config.get('username') === undefined && config.get('token') === undefined) {
     config.set('username', null);
     config.set('token', null);
 }
+
+// Live chat region
+if(config.get('chat-url') === undefined) {
+    config.set('chat-url', 'http://eu.chat.zelta.gq');
+}
+
 config.set('chat-animation', false);
 
 // -------- Commands --------
