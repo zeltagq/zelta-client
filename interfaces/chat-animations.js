@@ -1,6 +1,7 @@
-// Tiny function to enable chat typing effect
+// Module to enable and customize chat animations
 const term = require('terminal-kit').terminal;
 
+// Chat typing effect
 function typingEffect(value) {
     if (value === 'on') {
         config.set('chat-animation', true);
@@ -21,4 +22,15 @@ function typingEffect(value) {
     }
 }
 
-module.exports = {typingEffect};
+// Typing effect delay (typing speed)
+function typingDelay(value) {
+    if (Number.isInteger(value)) {
+        config.set('typing-delay', value);
+        term.brightYellow(`[Zelta Chat] (Typing Effect) Delay : ${value} ms`);
+    }
+    else {
+        term.brightYellow('Please provide an integer value in milliseconds');
+    }
+}
+
+module.exports = {typingEffect, typingDelay};

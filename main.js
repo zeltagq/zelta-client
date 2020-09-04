@@ -24,7 +24,7 @@ const {members} = require('./interfaces/list-members');
 const {timezone} = require('./interfaces/timezone');
 const {createRoom} = require('./interfaces/create-chat');
 const {joinRoom} = require('./interfaces/join-chat');
-const {typingEffect} = require('./interfaces/chat-animations');
+const {typingEffect, typingDelay} = require('./interfaces/chat-animations');
 const {chatRegion} = require('./interfaces/chat-region');
 
 // Notify user about new updates
@@ -44,7 +44,15 @@ if(config.get('chat-url') === undefined) {
     config.set('chat-url', 'http://eu.chat.zelta.gq');
 }
 
-config.set('chat-animation', false);
+// Chat animation
+if(config.get('chat-animation') === undefined) {
+    config.set('chat-animation', false);
+}
+
+// Chat animation delay
+if(config.get('typing-delay') === undefined) {
+    config.set('typing-delay', 115);
+}
 
 // -------- Commands --------
 
@@ -190,6 +198,14 @@ program
     .description('Enable or disable chat typing effect')
     .action((value) => {
         typingEffect(value);
+    });
+
+// Typing effect delay (typing speed)
+program
+    .command('typing-delay <value>')
+    .description('Delay in milliseconds between typing each character when typing effect is on')
+    .action((value) => {
+        typingDelay(value);
     });
 
 // Change chat server region

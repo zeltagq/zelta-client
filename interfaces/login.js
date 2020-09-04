@@ -52,7 +52,6 @@ function login() {
                 config.set('token', access_token);
             }, (err) => {
                 console.log(chalk.whiteBright('Login failed!'));
-                console.log(err);
             });
         }, (err) => {
             console.log(chalk.whiteBright('Server unreachable!'));

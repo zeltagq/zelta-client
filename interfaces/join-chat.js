@@ -130,7 +130,7 @@ function joinRoom() {
                     term.bold.brightYellow(`[${moment().utc().add(time_diff, 'hours').format('HH:mm')}] (${data.from}) `);
                     term.slowTyping(
                         emoji.emojify(unencrypted),
-                        { flashStyle: false, delay: 115, style: term.yellow },
+                        { flashStyle: false, delay: config.get('typing-delay'), style: term.yellow },
                         function () {
                             return takeInput();
                         }
