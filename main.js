@@ -205,13 +205,13 @@ program
     .command('typing-delay <value>')
     .description('Delay in milliseconds between typing each character when typing effect is on')
     .action((value) => {
-        typingDelay(value);
+        typingDelay(parseInt(value));
     });
 
 // Change chat server region
 program
     .command('region <value>')
-    .description('Set chat server region')
+    .description('Set chat server region (default : europe)')
     .action((region) => {
         chatRegion(region);
     });

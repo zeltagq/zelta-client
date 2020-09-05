@@ -27,9 +27,11 @@ function typingDelay(value) {
     if (Number.isInteger(value)) {
         config.set('typing-delay', value);
         term.brightYellow(`[Zelta Chat] (Typing Effect) Delay : ${value} ms`);
+        term('\n');
     }
     else {
         term.brightYellow('Please provide an integer value in milliseconds');
+        term('\n');
     }
 }
 

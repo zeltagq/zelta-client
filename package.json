@@ -1,6 +1,6 @@
 {
   "name": "zelta",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "Secure terminal messaging",
   "main": "main.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "zelta": "./main.js"
   },
   "author": "Arjun Nair",
-  "license": "MIT",
+  "license": "GPL",
   "dependencies": {
     "axios": "^0.19.2",
     "boxen": "^4.2.0",
